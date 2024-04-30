@@ -1,0 +1,10 @@
+@font-face {
+    font-family: futuristic;
+    src: url(./nasalization-rg.otf);
+}
+
+
+h1 {
+    color: purple;
+    font-family: 'futuristic', sans-serif;
+}
