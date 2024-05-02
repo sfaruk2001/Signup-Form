@@ -45,34 +45,36 @@ img {
 }
 
 .description, .inputs, .createAcc {
-    flex-grow: 1;
     padding-left: 15px;
 }
 
+
 .description {
-    background-color: rgba(249,250,251,255);
+    background-color: rgb(237, 235, 235);
     font-size: 1.2rem;
-    padding-left: 15px;
     padding-right: 100px;
     padding-bottom: 20px;
+    flex-grow: 1;
 }
 
 .description p {
     position: relative;
-    top: 90px;
-    min-width: 500px ;
+    top: 70px;
+    min-width: 500px;
     font-weight: bold;
     padding-right: 50px;
 }
 
 .inputs {
-    
+    padding-bottom: 15px;
 }
 
 .inputs form {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
+    
+    
 }
 
 form > div {
@@ -84,3 +86,31 @@ form > div {
 .inputs p {
     font-weight: bold;
 }
+
+.createAcc {
+    background-color: rgba(249,250,251,255);
+    flex-grow: 1;
+    padding-top: 20px;
+    box-shadow: inset 0px 1px 10px grey;
+
+    
+}
+
+.createAcc button {
+    font-size: 1.2rem;
+    padding: 5px 30px;
+    background-color: #3499b2;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+input:focus {
+    border: 2px solid blue;
+    box-shadow: 0px 3px 10px grey;
+}
+
+#passwd:invalid, #passwdC:invalid {
+    border-radius: 5px;
+    border: 2px solid red;
+}
+
