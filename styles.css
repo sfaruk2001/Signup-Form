@@ -5,11 +5,11 @@
 
 body {
     display: flex;
-    height: 100vh;
+    min-height: 100dvh;
     width: 100vw;
 }
 
-.firstHalf {
+.sideBar {
     background-image: url(./City.jpg);
     min-width: 35%;
     position: relative;
@@ -109,8 +109,8 @@ input:focus {
     box-shadow: 0px 3px 10px grey;
 }
 
-#passwd:invalid, #passwdC:invalid {
+input[type='password'], #passwdC:invalid {
     border-radius: 5px;
-    border: 2px solid red;
+    border: 1px solid red;
 }
 
