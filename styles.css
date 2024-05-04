@@ -8,11 +8,12 @@ body {
     min-height: 100dvh;
     width: 100vw;
 }
-
+/** This styles the left side of the page*/
 .sideBar {
     background-image: url(./City.jpg);
     min-width: 35%;
     position: relative;
+    flex-grow: 1;
 }
 
 .logoBar {
@@ -37,7 +38,9 @@ img {
     max-height: 150px;
 }
 
+/** This styles the second half of the page */
 .secondHalf {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
@@ -48,9 +51,12 @@ img {
     padding-left: 15px;
 }
 
-
-.description {
-    background-color: rgb(237, 235, 235);
+/** Styles the first third of the second half */
+.description { 
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: #f9fafb;
     font-size: 1.2rem;
     padding-right: 100px;
     padding-bottom: 20px;
@@ -58,12 +64,12 @@ img {
 }
 
 .description p {
-    position: relative;
-    top: 70px;
-    min-width: 500px;
+
     font-weight: bold;
     padding-right: 50px;
 }
+
+/** Styles the second third of the second half */
 
 .inputs {
     padding-bottom: 15px;
@@ -87,8 +93,15 @@ form > div {
     font-weight: bold;
 }
 
+label {
+    font-size: .8rem;
+    color: #6c737c;
+}
+
+/** Styles the final third of the second half */
+
 .createAcc {
-    background-color: rgba(249,250,251,255);
+    background-color: #f9fafb;
     flex-grow: 1;
     padding-top: 20px;
     box-shadow: inset 0px 1px 10px grey;
@@ -102,15 +115,40 @@ form > div {
     background-color: #3499b2;
     color: aliceblue;
     border-radius: 10px;
+    border: solid white 2px;
 }
+
+/** Styles the validations */
 
 input:focus {
     border: 2px solid blue;
     box-shadow: 0px 3px 10px grey;
 }
 
-input[type='password'], #passwdC:invalid {
+input:valid {
+    border-radius: 5px;
+    border: 1px solid green;
+}
+
+input:invalid {
     border-radius: 5px;
     border: 1px solid red;
 }
+
+
+input[type='password']:invalid + span::before {
+    content: '*Passwords do not match';
+    color: red;
+}
+
+
+input:placeholder-shown {
+    border: 1px solid #ccc;
+}
+
+
+
+
+
+
 
